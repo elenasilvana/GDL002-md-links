@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  	"eslint": "eslint --ext .js src/ test/",
+  	"pretest": "npm run eslint",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,10 @@
   },
   "homepage": "https://github.com/elenasilvana/GDL002-md-links#readme",
   "devDependencies": {
+    "eslint": "^5.16.0",
     "jest": "^24.7.1"
+  },
+  "dependencies": {
+    "bespoken-tools": "^2.3.7"
   }
 }
