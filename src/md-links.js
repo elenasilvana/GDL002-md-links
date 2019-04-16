@@ -2,15 +2,23 @@ const fs = require('fs');
 const pt = require('path');
 
 
-//arguments from the CLI, path to check file 
-//const path = process.argv[2];
-
 module.exports = {
-	//validar ruta
+	
+//validate if path is true
+	validatePath: function (path, callback) {
+		/* 
+		if (path === true){
+			call function fileOrDirectory
+		} 
+		else {
+			show message "please introduce a absolut rute like: example/documents/"
+		}
+		*/
+	},
 
 
 //check if the path is file or directory
-	fileOrDirectory: function (path, callback) {
+	fileOrDirectory: function (path, callback) { 
 		fs.stat(path, (err,stat) => {
 		let result; 
 			if(err) {
@@ -50,7 +58,14 @@ module.exports = {
 					callback(result);	
 		})	
 
+	},
 
+	fileType: function () {
+		//validate .md fileType
+		/*if(validation === true){
+			call function that readfile
+
+		} */
 	},
 }
 
