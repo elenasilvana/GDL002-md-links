@@ -6,14 +6,18 @@ module.exports = {
 	
 //validate if path is true
 	validatePath: function (path, callback) {
-		/* 
-		if (path === true){
-			call function fileOrDirectory
-		} 
-		else {
-			show message "please introduce a absolut rute like: example/documents/"
+		let result;
+		if(path){
+			console.log('hay un path');
+			result = true;
+			//call function fileOrDirectory
 		}
-		*/
+		else if (!path) { 
+			console.log('por favor ingrese una ruta absoluta');
+			result = false;
+
+		}
+		return result;
 	},
 
 
@@ -64,9 +68,21 @@ module.exports = {
 		//validate .md fileType
 		/*if(validation === true){
 			call function that readfile
+		else { message 'this file is not .md file'}
 
 		} */
 	},
+
+	selectFile: function () {
+		//obtiene un array y debe seleccionar el array[0] y ejecutar la función readAndGetLinks
+
+	},
+
+	readAndGetLinks: function () {
+
+	}
+
+
 }
 
 

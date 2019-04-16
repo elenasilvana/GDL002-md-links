@@ -25,7 +25,7 @@ describe('mdLinks', () => {
 describe('validatePath', () => {
 
 	it('should validate if path is true', () => { 
-		expect(mdLinks.validatePath).toBe('true');
+		expect(mdLinks.validatePath(pathFile)).toBe(true);
 	});
 })
 
@@ -75,10 +75,10 @@ describe('filterMd', () => {
 });
 
 //debería haber una función que le permita al usuario elegir un archivo
-//esa función debería validarse aquí
+//en la versión simplificada que será esta versión si hay mas de un resultado se toma el primer archivo
 describe('selectFile', () => {
 
-	it('should select one file the user chose', () => {
+	it('should select the first file listed', () => {
 		expect(mdLinks.selectFile())
 
 	})
@@ -96,6 +96,12 @@ describe('filterType', () => {
 })
 
 //function to read a file, and get links
-
+describe('readAndGetLinks', () => {
+	it('readAndGetLinks should read and get all links found in a markdown .md file', () => {
+		expect(mdLinks.readAndGetLinks(path, function(result){
+			expect(Array.isArray(result)).toBe(true);
+		}));
+	})
+})
 
 
