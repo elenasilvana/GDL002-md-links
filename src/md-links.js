@@ -6,9 +6,11 @@ const pt = require('path');
 //const path = process.argv[2];
 
 module.exports = {
+	//validar ruta
 
 
-fileOrDirectory: function (path, callback) {
+//check if the path is file or directory
+	fileOrDirectory: function (path, callback) {
 		fs.stat(path, (err,stat) => {
 		let result; 
 			if(err) {
@@ -27,11 +29,14 @@ fileOrDirectory: function (path, callback) {
 			}
 		});
 	},
+
+	filterMd: function (){
+
+		return result
+	}
 }
 
 
-
-	//validar ruta
 
 
 
