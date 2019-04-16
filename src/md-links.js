@@ -30,22 +30,28 @@ module.exports = {
 		});
 	},
 
-	filterMd: function (){
+//find md files on the path directory
+	filterMd: function (path, callback) {
 
-		return result
-	}
+		const ext = 'md'; 
+		fs.readdir(path, (err, dirContents) => {
+			let result = []; 
+
+			if(err) {
+				callback(error);
+				}
+				
+			dirContents.forEach((file) => {
+				if(('.' + ext) === pt.extname(file)){
+					result.push(file);
+				}
+			})
+					
+					callback(result);	
+		})	
+
+
+	},
 }
 
 
-
-
-
-
-	//function mdLinks (path){
-	//}
-  // aquí deberían ir las funciones o qué ?
-
-
-
- // process.argv te regresa un array donde el primer elemento es 'node, el segundo es el path, y el 3 -index 2- es lo que le escribas'
- //lo que te regrese va a ser tipo string
