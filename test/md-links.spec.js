@@ -1,4 +1,4 @@
-//que forma se debería utilizar?  import o link de abajo
+//que forma se debería utilizar?  import o link
 //los modulos en html se agregaban indicando en el script que eran type="module"
 // aqui el archivo dice module.exports
 //import {funciones que se importan} from 'path';
@@ -7,6 +7,8 @@ const pathFile = '/home/elenasilvana/Documents/movies.txt';
 const pathDirectory = '/home/elenasilvana/Documents';
 //multiples archivos md en un directorio
 const pathMdDir = '/home/elenasilvana/Documents/Laboratoria/Proyectos/2/GDL002-data-lovers'; 
+const pathFileMd = '/home/elenasilvana/Documents/Laboratoria/Proyectos/1/gdl-2019-01-bc-core-cipher/README.md'
+
 
 
 describe('mdLinks', () => {
@@ -19,6 +21,13 @@ describe('mdLinks', () => {
 
 });
 
+//test if path is true
+describe('validatePath', () => {
+
+	it('should validate if path is true', () => { 
+		expect(mdLinks.validatePath).toBe('true');
+	});
+})
 
 describe('fileOrDirectory', () => {
 
@@ -65,4 +74,28 @@ describe('filterMd', () => {
 
 });
 
-//function for open and reading file
+//debería haber una función que le permita al usuario elegir un archivo
+//esa función debería validarse aquí
+describe('selectFile', () => {
+
+	it('should select one file the user chose', () => {
+		expect(mdLinks.selectFile())
+
+	})
+})
+
+
+//validate fileType
+describe('filterType', () => {
+	it('filterType should validate the file is .md file', () => {
+		expect(mdLinks.filterType(pathFileMd, function(result){
+			expect(result).toBe(true);
+		})
+		)
+	})
+})
+
+//function to read a file, and get links
+
+
+
