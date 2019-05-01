@@ -32,7 +32,7 @@ module.exports = {
 			else if((stat.isDirectory()) === true){
 				result = 'es un directorio';
 				callback(result);
-				//hay que llamar el filter que busca por tipo de archivo md
+				//hay que llamar el filterMd
 			}
 			else if(stat.isFile()=== true){
 				result = 'es un archivo';
@@ -76,9 +76,37 @@ module.exports = {
 	selectFile: function () {
 		//obtiene un array y debe seleccionar el array[0] y ejecutar la función readAndGetLinks
 
+
 	},
 
-	readAndGetLinks: function () {
+	readAndGetLinks: (path, callback) => {
+	//open and read files
+	fs.readFile(path, (err, filecontents) => {
+		
+		if(err){
+			callback(err);
+		};
+
+		const showContent = filecontents.toString();
+		const regExpr = /\[[\(|\`]*(.+)[\)|\`]*\]\((.+)\)/gm;
+		const regExpr2 = /\[[\(|\`]*(.+)[\)|\`]*\]\((.+)\)/;
+
+		//result array matches
+		const extractLinks = showContent.match(regExpr);
+		const links = []; 
+		for(let x in extractLinks){
+			let groupData = regExpr2.exec(extractLinks[x]);
+			let objectGroup = {
+				href: groupData[2],
+				text: groupData[1],
+				file: path
+			};
+			//console.log(objectGroup);
+			links.push(objectGroup);
+		}
+		callback(links);
+		
+	})		
 
 	}
 
