@@ -13,9 +13,10 @@ const mdLinksObject = {
 			result = true;
 			//call function fileOrDirectory
 
+
 		}
 		else if (!path) { 
-			console.log('por favor ingrese una ruta absoluta');
+			console.log('por favor ingrese una ruta');
 			result = false;
 
 		}
@@ -32,14 +33,14 @@ const mdLinksObject = {
 			}
 
 			else if((stat.isDirectory()) === true){
-				result = 'es un directorio';
+				result = 'directorio';
 				callback(result);
 				//hay que llamar el filterMd
 			}
 			else if(stat.isFile()=== true){
-				result = 'es un archivo';
+				result = 'archivo';
 				callback(result);
-				//hay que leer el archivo
+				//llamar readAndGetLinks
 			}
 		});
 	},
@@ -75,12 +76,6 @@ const mdLinksObject = {
 		} */
 	},
 
-	selectFile: function (data, callback) {
-		//data is an array
-		//obtiene un array y debe seleccionar el array[0] y ejecutar la función readAndGetLinks
-
-
-	},
 
 	readAndGetLinks: (path, callback) => {
 	//open and read file
@@ -112,6 +107,8 @@ const mdLinksObject = {
 	})		
 
 	}
+
+	//tener que extrae la data de un path valido ===> funcion que analiza si es un directorio o archivo
 
 
 }
