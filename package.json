@@ -1,4 +1,31 @@
 {
   "name": "md-links",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "description": "## Preámbulo",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+  	"eslint": "eslint --ext .js src/ test/",
+  	"pretest": "npm run eslint",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elenasilvana/GDL002-md-links.git"
+  },
+  "author": "ElenaSilvana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elenasilvana/GDL002-md-links/issues"
+  },
+  "homepage": "https://github.com/elenasilvana/GDL002-md-links#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "jest": "^24.7.1"
+  },
+  "dependencies": {
+    "bespoken-tools": "^2.3.7"
+  }
 }
