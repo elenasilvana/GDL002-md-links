@@ -9,7 +9,7 @@ const mdLinksObject = {
 	validatePath: function (path, callback) {
 		let result;
 		if(path){
-			console.log('hay un path');
+			//console.log('hay un path');
 			result = true;
 			//call function fileOrDirectory
 
@@ -107,8 +107,6 @@ const mdLinksObject = {
 	})		
 
 	}
-
-	//tener que extrae la data de un path valido ===> funcion que analiza si es un directorio o archivo
 
 
 }
