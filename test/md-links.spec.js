@@ -28,6 +28,10 @@ describe('validatePath', () => {
 	it('should validate if path is true', () => { 
 		expect(mdLinks.validatePath(pathFile)).toBe(true);
 	})
+
+	it('should validate if path is false', () => {
+		expect(mdLinks.validatePath('')).toBe(false);
+	})
 ;})
 
 describe('fileOrDirectory', () => {
@@ -102,7 +106,7 @@ describe('readAndGetLinks', () => {
 
 	it('readAndGetLinks result[0] should be an object', () => {
 		expect(mdLinks.readAndGetLinks(pruebaMd, function(result){
-			expect(typeof result[0]).toBe('object')
+			expect(typeof result[0]).equalTo('object');
 		}))
 	})
 })
