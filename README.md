@@ -15,13 +15,13 @@ En está primer versión al ingresar el path (es decir la ruta), recibiremos un 
 
 La siguiente librería sirve para leer archivos.md y extraer los links contenidos en el archivo
 
-## Instalación
+## Instalacion
 Deberás utilizar tu CLI o terminal
 
 1. Instala Node.js
-2. `npm install mdLinks` si estás usando Linux y esto falla trata anteponiendo `sudo`
+2. `npm install @elesilvana/mdLinks` si estás usando Linux y esto falla trata anteponiendo `sudo`
 
-3. Ejecuta `mdLinks`
+3. Ejecuta `mdLinks` si falla `@elesilvana/mdLinks`
 
 
 ## Instrucciones de uso
