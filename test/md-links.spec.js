@@ -8,7 +8,7 @@ const pathDirectory = '/home/elenasilvana/Documents';
 //multiples archivos md en un directorio
 const pathMdDir = '/home/elenasilvana/Documents/Laboratoria/Proyectos/2/GDL002-data-lovers'; 
 const pathFileMd = '/home/elenasilvana/Documents/Laboratoria/Proyectos/1/gdl-2019-01-bc-core-cipher/README.md'
-const pruebaMd = '/home/elenasilvana/Documents/Laboratoria/Proyectos/4/archivoprueba.md';
+const pruebaMd = '../archivoprueba.md';
 
 
 
@@ -41,14 +41,14 @@ describe('fileOrDirectory', () => {
   it('fileOrDirectory should say if path go to a file', () => {
 
   	mdLinks.fileOrDirectory(pathFile, function(result){
-  		expect(result).toBe('es un archivo');
+  		expect(result).toBe('archivo');
   	});
   });
 //test if path is a directory
 	it('fileOrDirectory should say if path go to a directory', () => {
 
 		mdLinks.fileOrDirectory(pathDirectory, function(result){
-			expect(result).toBe('es un directorio');
+			expect(result).toBe('directorio');
 		});
 	});
 
@@ -74,16 +74,6 @@ describe('filterMd', () => {
 	});
 
 });
-
-//debería haber una función que le permita al usuario elegir un archivo
-//en la versión simplificada que será esta versión si hay mas de un resultado se toma el primer archivo
-describe('selectFile', () => {
-
-	it('should select the first file listed', () => {
-		expect(mdLinks.selectFile())
-
-	})
-})
 
 
 //validate fileType
