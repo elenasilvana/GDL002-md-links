@@ -1,3 +1,6 @@
+
+#!/usr/bin/env node
+
 //export module from md-links file
 const mdLinks = require('./md-links.js');
 
@@ -26,6 +29,12 @@ mdLinks.fileOrDirectory(path, (result)=>{
 
 
 });
+
+/*
+const pathMdDir = '/home/elenasilvana/Documents/Laboratoria/Proyectos/2/GDL002-data-lovers'; 
+const pathFileMd = '/home/elenasilvana/Documents/Laboratoria/Proyectos/1/gdl-2019-01-bc-core-cipher/README.md'
+const pruebaMd = '../archivoprueba.md';
+*/
 
 //ruta filterMd  /home/elenasilvana/Documents/Laboratoria/Proyectos/2/GDL002-data-lovers
 
