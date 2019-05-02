@@ -8,6 +8,7 @@ const pathDirectory = '/home/elenasilvana/Documents';
 //multiples archivos md en un directorio
 const pathMdDir = '/home/elenasilvana/Documents/Laboratoria/Proyectos/2/GDL002-data-lovers'; 
 const pathFileMd = '/home/elenasilvana/Documents/Laboratoria/Proyectos/1/gdl-2019-01-bc-core-cipher/README.md'
+const pruebaMd = '/home/elenasilvana/Documents/Laboratoria/Proyectos/4/archivoprueba.md';
 
 
 
@@ -26,8 +27,8 @@ describe('validatePath', () => {
 
 	it('should validate if path is true', () => { 
 		expect(mdLinks.validatePath(pathFile)).toBe(true);
-	});
-})
+	})
+;})
 
 describe('fileOrDirectory', () => {
 
@@ -86,9 +87,9 @@ describe('selectFile', () => {
 
 
 //validate fileType
-describe('filterType', () => {
-	it('filterType should validate the file is .md file', () => {
-		expect(mdLinks.filterType(pathFileMd, function(result){
+describe('fileType', () => {
+	it('fileType should validate the file is .md file', () => {
+		expect(mdLinks.fileType(pathFileMd, function(result){
 			expect(result).toBe(true);
 		})
 		)
@@ -97,10 +98,22 @@ describe('filterType', () => {
 
 //function to read a file, and get links
 describe('readAndGetLinks', () => {
-	it('readAndGetLinks should read and get all links found in a markdown .md file', () => {
-		expect(mdLinks.readAndGetLinks(path, function(result){
+	it('readAndGetLinks should return an array', () => {
+		expect(mdLinks.readAndGetLinks(pruebaMd, function(result){
 			expect(Array.isArray(result)).toBe(true);
 		}));
+	})
+
+	it('readAndGetLinks should return an array with 7 elements', () => {
+		expect(mdLinks.readAndGetLinks(pruebaMd, function(result){
+			expect(result.length).toBe(7);
+		}))
+	})
+
+	it('readAndGetLinks result[0] should be an object', () => {
+		expect(mdLinks.readAndGetLinks(pruebaMd, function(result){
+			expect(typeof result[0]).toBe('object')
+		}))
 	})
 })
 
