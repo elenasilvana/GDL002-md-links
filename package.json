@@ -1,14 +1,14 @@
 {
   "name": "@elesilvana/md-links",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "## Instalacion",
   "main": "src/index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-  	"eslint": "eslint --ext .js src/ test/",
-  	"pretest": "npm run eslint",
+    "eslint": "eslint --ext .js src/ test/",
+    "pretest": "npm run eslint",
     "test": "jest --coverage",
     "start": "npm run src/index.js"
   },
