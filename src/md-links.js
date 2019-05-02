@@ -2,7 +2,8 @@ const fs = require('fs');
 const pt = require('path');
 
 
-module.exports = {
+
+const mdLinksObject = {
 	
 //validate if path is true
 	validatePath: function (path, callback) {
@@ -11,6 +12,7 @@ module.exports = {
 			console.log('hay un path');
 			result = true;
 			//call function fileOrDirectory
+
 		}
 		else if (!path) { 
 			console.log('por favor ingrese una ruta absoluta');
@@ -26,7 +28,7 @@ module.exports = {
 		fs.stat(path, (err,stat) => {
 		let result; 
 			if(err) {
-			callback(error);
+			callback(err + ' your path is not valid, try again');
 			}
 
 			else if((stat.isDirectory()) === true){
@@ -73,14 +75,15 @@ module.exports = {
 		} */
 	},
 
-	selectFile: function () {
+	selectFile: function (data, callback) {
+		//data is an array
 		//obtiene un array y debe seleccionar el array[0] y ejecutar la función readAndGetLinks
 
 
 	},
 
 	readAndGetLinks: (path, callback) => {
-	//open and read files
+	//open and read file
 	fs.readFile(path, (err, filecontents) => {
 		
 		if(err){
@@ -113,4 +116,5 @@ module.exports = {
 
 }
 
+module.exports = mdLinksObject;
 
