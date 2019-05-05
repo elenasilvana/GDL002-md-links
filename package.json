@@ -2,15 +2,14 @@
   "name": "@elesilvana/md-links",
   "version": "1.0.0",
   "description": "## Instalacion",
-  "main": "src/index.js",
+  "main": "bin/cli.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint",
-    "test": "jest --coverage",
-    "start": "npm run src/index.js"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -25,5 +24,8 @@
   "devDependencies": {
     "eslint": "^5.16.0",
     "jest": "^24.7.1"
+  },
+  "bin": {
+    "md-links": "bin/cli.js"
   }
 }
