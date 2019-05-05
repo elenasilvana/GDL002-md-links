@@ -7,12 +7,6 @@
 
 algun texto por acá.
 
-### 1. 
-
-### 2. 
-
-Tienes estas opciones:
-
 2.1. Haz la "Parte Opcional" [(Hacker Edition)](README.md#parte-opcional-hacker-edition).
 Enfócate en los dos puntos principales: _cargar la data usando [`fetch`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)_
 y/o _agregar gráficas con [`Chart.js`](https://www.chartjs.org/)
@@ -22,3 +16,6 @@ pasa a las siguientes opciones (obviamente).
 2.4 [Refactoriza](https://es.wikipedia.org/wiki/Refactorizaci%C3%B3n) tu código
 para aumentar la cobertura de _tests_ (incluyendo pruebas para componentes de
 interfaz).
+
+[algunTexto](http://losgatitos.com)
+[someotherText](http://www.google.com)
