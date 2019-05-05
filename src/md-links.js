@@ -86,8 +86,9 @@ const mdLinksObject = {
 		};
 
 		const showContent = filecontents.toString();
-		const regExpr = /\[[\(|\`]*(.+)[\)|\`]*\]\((.+)\)/gm;
-		const regExpr2 = /\[[\(|\`]*(.+)[\)|\`]*\]\((.+)\)/;
+
+		const regExpr = /\[[\(|\`]?(.+)\]\((https?:\/\/.+)\)/gm;
+		const regExpr2 = /\[[\(|\`]?(.+)\]\((https?:\/\/.+)\)/;
 
 		//result array matches
 		const extractLinks = showContent.match(regExpr);
