@@ -2,7 +2,7 @@
   "name": "@elesilvana/md-links",
   "version": "1.0.0",
   "description": "## Instalacion",
-  "main": "bin/cli.js",
+  "main": "./bin/cli.js",
   "directories": {
     "test": "test"
   },
@@ -26,6 +26,6 @@
     "jest": "^24.7.1"
   },
   "bin": {
-    "md-links": "bin/cli.js"
+    "md-links": "./bin/cli.js"
   }
 }

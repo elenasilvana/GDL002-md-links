@@ -18,6 +18,7 @@ mdLinks.fileOrDirectory(path, (result)=>{
 		mdLinks.filterMd(path, (result)=>{
 			const route = `${path}\/${result[0]}`;
 			mdLinks.readAndGetLinks(route, (res)=>{
+				//console.log(optionsMd.validate(res));
 				console.log(res);
 			});			
 		});

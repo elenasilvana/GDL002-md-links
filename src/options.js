@@ -1,7 +1,7 @@
 const http = require('http');
 
 const options = {
-	validate: (arr) => {
+	validate: (object) => {
 		//recibe an objects array
 	for(let i = 0; i<object.length; i++){
 
