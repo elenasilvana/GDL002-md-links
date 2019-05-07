@@ -1,9 +1,6 @@
 # Markdown Links
+![md-links](https://i.postimg.cc/wxNzvnNf/Screenshot-from-2019-05-07-05-21-06.png)
 
-
- `href`: URL encontrada.
-- `text`: Texto que aparecía dentro del link (`<a>`).
-- `file`: Ruta del archivo donde se encontró el link.
 
 En ocasiones estamos investigando o leyendo archivos markdown en los cuales podemos encontrar valiosos recursos referenciados por medio de links, desafortunadamente al cabo de algún tiempo algunos de estos links podrían ya no estar habilitados, con lo cual dejamos al usuario interesado sin acceso a esta información que hemos referenciado. 
 
@@ -11,22 +8,20 @@ Esta librería busca dar solución a la problematica de hacer una validación  r
 
 En está primer versión al ingresar el path (es decir la ruta), recibiremos un array de objetos con las propiedades href, text, file. 
 
-
-
 La siguiente librería sirve para leer archivos.md y extraer los links contenidos en el archivo
 
 ## Instalacion
 Deberás utilizar tu CLI o terminal
 
 1. Instala Node.js
-2. `npm install @elesilvana/mdLinks` si estás usando Linux y esto falla trata anteponiendo `sudo`
+2. `npm install @elesilvana/md-links` si estás usando Linux y esto falla trata anteponiendo `sudo`
 
-3. Ejecuta `mdLinks` si falla `@elesilvana/mdLinks`
+3. Ejecuta `md-links` si falla `@elesilvana/md-links`
 
 
 ## Instrucciones de uso
 
-1. Ejecuta `mdLinks`
+1. Ejecuta `md-links`
 
 2. md-links <ruta-archivo-directorio>
 
